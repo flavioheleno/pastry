@@ -30,7 +30,7 @@ final class Pi {
       throw new RuntimeException('Cannot read CPU information from "/proc/cpuinfo"');
     }
 
-    $cpuinfo = array_map(
+    $cpuInfo = array_map(
       function (string $line) {
         return trim(str_replace("\t", ' ', $line));
       },
