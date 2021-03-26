@@ -27,6 +27,10 @@ final class Pin {
     $this->title            = $title;
   }
 
+  public function getLogical(): int {
+    return $this->physical - 1;
+  }
+
   public function getPhysical(): int {
     return $this->physical;
   }
