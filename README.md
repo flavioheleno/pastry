@@ -1,4 +1,4 @@
-# Pastry [![Maintainability](https://api.codeclimate.com/v1/badges/2a6fccf8032894f30507/maintainability)](https://codeclimate.com/github/flavioheleno/pastry/maintainability)
+# Pastry [![Maintainability](https://api.codeclimate.com/v1/badges/2a6fccf8032894f30507/maintainability)](https://codeclimate.com/github/flavioheleno/pastry/maintainability) [![Total Downloads](https://poser.pugx.org/flavioheleno/pastry/downloads)](//packagist.org/packages/flavioheleno/pastry)
 
 Pastry is a handy tool to extract information from your [Raspberry Pi](https://www.raspberrypi.org/).
 
