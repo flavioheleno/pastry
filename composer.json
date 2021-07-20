@@ -21,27 +21,56 @@
     }
   },
   "config": {
-    "sort-packages": true
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "preferred-install": "dist"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/flavioheleno"
+    }
+  ],
   "require": {
     "php": ">=7.4"
   },
   "require-dev": {
+    "infection/infection": "^0.21.5",
     "php-parallel-lint/php-parallel-lint": "^1.2",
     "phpstan/phpstan": "^0.12.58",
     "phpunit/phpunit": "^9.5",
     "psy/psysh": "^0.10.5",
-    "roave/security-advisories": "dev-latest",
+    "roave/security-advisories": "dev-master",
     "squizlabs/php_codesniffer": "^3.5",
     "vimeo/psalm": "^4.3"
   },
   "scripts": {
-    "taint": "vendor/bin/psalm --taint-analysis",
-    "check": "vendor/bin/phpstan analyse --level=8 --autoload-file=vendor/autoload.php src/ tests/",
-    "lint": [
-      "vendor/bin/parallel-lint --exclude vendor .",
-      "vendor/bin/phpcs --standard=ruleset.xml src/ tests/"
-    ],
-    "test": "vendor/bin/phpunit ./tests/ --coverage-html=./report/coverage/ --whitelist=./src/ --testdox-html=./report/testdox.html --disallow-test-output --process-isolation"
+    "console": "vendor/bin/psysh",
+    "infection": "vendor/bin/infection",
+    "lint": "vendor/bin/parallel-lint --exclude vendor .",
+    "phpcs": "vendor/bin/phpcs --standard=ruleset.xml src/ tests/",
+    "phpstan": "vendor/bin/phpstan analyse --level=max --autoload-file=vendor/autoload.php src/",
+    "phpunit": "vendor/bin/phpunit ./tests/ --coverage-html=./report/coverage/ --whitelist=./src/ --testdox-html=./report/testdox.html --disallow-test-output --process-isolation",
+    "psalm": "vendor/bin/psalm --taint-analysis",
+    "test": [
+      "@infection",
+      "@lint",
+      "@phpunit",
+      "@phpstan",
+      "@psalm",
+      "@phpcs"
+    ]
+  },
+  "scripts-descriptions": {
+    "console": "Runs PsySH Console",
+    "infection": "Runs mutation test framework",
+    "lint": "Runs complete codebase lint testing",
+    "phpcs": "Runs coding style checking",
+    "phpstan": "Runs complete codebase static analysis",
+    "phpunit": "Runs library test suite",
+    "psalm": "Runs complete codebase taint analysis",
+    "test": "Runs all tests"
   }
 }
