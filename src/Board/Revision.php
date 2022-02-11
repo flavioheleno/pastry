@@ -10,6 +10,7 @@ use RuntimeException;
 /**
  * @link https://elinux.org/RPi_HardwareHistory
  * @link https://www.raspberrypi.org/documentation/hardware/raspberrypi/revision-codes/README.md
+ * @link https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc
  */
 abstract class Revision {
   protected string $releaseDate;
@@ -66,7 +67,8 @@ abstract class Revision {
     0xc03111 => 'Q2 2019',
     0xc03112 => 'Q2 2019',
     0xc03114 => 'Q2 2020',
-    0xd03114 => 'Q2 2020'
+    0xd03114 => 'Q2 2020',
+    0x902120 => 'Q4 2021'
   ];
 
 
@@ -138,7 +140,7 @@ abstract class Revision {
     'Internal use only',
     'CM3+',
     '4B',
-    '',
+    'Zero 2 W',
     '400',
     'CM4'
   ];
