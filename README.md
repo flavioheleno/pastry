@@ -15,26 +15,32 @@ composer require flavioheleno/pastry
 The Pastry library is super straightforward to use.
 
 ```php
+/* Probe the system for information */
 $pi = Pastry\Pi::probe();
 
+
 /* Board details */
-$pi->getBoard()->getHardware();
+$board = $pi->getBoard();
+
+$board->getHardware();
 // string(7) "BCM2711"
-$pi->getBoard()->getRevision();
+$board->getRevision();
 // string(6) "d03114"
-$pi->getBoard()->getSerial();
+$board->getSerial();
 // string(16) "xxxxxxxxxxxxxxxx"
-$pi->getBoard()->getModel();
+$board->getModel();
 // string(30) "Raspberry Pi 4 Model B Rev 1.4"
 
 /* CPU details */
-$pi->getCpu()->getCount();
+$cpu = $pi->getCpu();
+
+$cpu->getCount();
 // int(4)
-$pi->getCpu()->getModelName();
+$cpu->getModelName();
 // string(27) "ARMv7 Processor rev 3 (v7l)"
-$pi->getCpu()->getBogoMips();
+$cpu->getBogoMips();
 // float(108)
-$pi->getCpu()->getFeatures();
+$cpu->getFeatures();
 // array(15) {
 //   [0]  => string(4) "half"
 //   [1]  => string(5) "thumb"
@@ -52,39 +58,41 @@ $pi->getCpu()->getFeatures();
 //   [13] => string(7) "evtstrm"
 //   [14] => string(5) "crc32"
 // }
-$pi->getCpu()->getImplementer();
+$cpu->getImplementer();
 // int(65)
-$pi->getCpu()->getArchitecture();
+$cpu->getArchitecture();
 // int(7)
-$pi->getCpu()->getVariant();
+$cpu->getVariant();
 // int(0)
-$pi->getCpu()->getPart();
+$cpu->getPart();
 // int(3336)
-$pi->getCpu()->getRevision();
+$cpu->getRevision();
 // int(3)
 
 /* Revision details */
-$pi->getRevision()->getReleaseDate();
+$revision = $pi->getRevision();
+
+$revision->getReleaseDate();
 // string(7) "Q2 2020"
-$pi->getRevision()->getOvervoltage();
+$revision->getOvervoltage();
 // int(0) - Overvoltage allowed
-$pi->getRevision()->getOtpProgram();
+$revision->getOtpProgram();
 // int(0) - OTP programming allowed
-$pi->getRevision()->getOtpRead();
+$revision->getOtpRead();
 // int(0) - OTP reading allowed
-$pi->getRevision()->getWarranty();
+$revision->getWarranty();
 // int(0) - Warranty is intact
-$pi->getRevision()->getNewFlag();
+$revision->getNewFlag();
 // int(1) - new-style revision
-$pi->getRevision()->getMemorySize();
+$revision->getMemorySize();
 // int(5) - 8GB
-$pi->getRevision()->getManufacturer();
+$revision->getManufacturer();
 // int(0) - Sony UK
-$pi->getRevision()->getProcessor();
+$revision->getProcessor();
 // int(3) - BCM2711
-$pi->getRevision()->getType();
+$revision->getType();
 // int(17) - 4B
-$pi->getRevision()->getPcbRevision();
+$revision->getPcbRevision();
 // float(1.4)
 ```
 
