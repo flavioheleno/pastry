@@ -104,6 +104,7 @@ Revision                            | Model                               | Cont
 ------------------------------------|-------------------------------------|------------
 [000e](tests/Fixtures/000e.txt)     | Raspberry Pi Model B Rev 2          | [flavioheleno](https://github.com/flavioheleno)
 [9000c1](tests/Fixtures/9000c1.txt) | Raspberry Pi Zero W Rev 1.1         | [flavioheleno](https://github.com/flavioheleno)
+[902120](tests/Fixtures/902120.txt) | Raspberry Pi Zero 2 W Rev 1.0       | [okiedork](https://github.com/okiedork)
 [a020d3](tests/Fixtures/a020d3.txt) | Raspberry Pi 3 Model B Plus Rev 1.3 | [okiedork](https://github.com/okiedork)
 [a21041](tests/Fixtures/a21041.txt) | Raspberry Pi 2 Model B Rev 1.1      | [okiedork](https://github.com/okiedork)
 [d03114](tests/Fixtures/d03114.txt) | Raspberry Pi 4 Model B Rev 1.4      | [flavioheleno](https://github.com/flavioheleno)

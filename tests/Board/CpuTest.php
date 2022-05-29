@@ -63,6 +63,20 @@ final class CpuTest extends TestCase {
         ]
       ],
       [
+        '902120.txt',
+        [
+          4,
+          '',
+          38.40,
+          ['fp', 'asimd', 'evtstrm', 'crc32', 'cpuid'],
+          0x41,
+          8,
+          0x0,
+          0xd03,
+          4
+        ]
+      ],
+      [
         'a020d3.txt',
         [
           4,

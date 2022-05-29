@@ -48,6 +48,15 @@ final class BoardTest extends TestCase {
         ]
       ],
       [
+        '902120.txt',
+        [
+          'BCM2835',
+          '902120',
+          'xxxxxxxxxxxxxxxx',
+          'Raspberry Pi Zero 2 W Rev 1.0'
+        ]
+      ],
+      [
         'a020d3.txt',
         [
           'BCM2835',
