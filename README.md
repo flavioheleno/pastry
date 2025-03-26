@@ -110,6 +110,7 @@ Revision                            | Model                               | Cont
 [a21041](tests/Fixtures/a21041.txt) | Raspberry Pi 2 Model B Rev 1.1      | [okiedork](https://github.com/okiedork)
 [c03115](tests/Fixtures/c03115.txt) | Raspberry Pi 4 Model B Rev 1.5      | [flavioheleno](https://github.com/flavioheleno)
 [d03114](tests/Fixtures/d03114.txt) | Raspberry Pi 4 Model B Rev 1.4      | [flavioheleno](https://github.com/flavioheleno)
+[d04170](tests/Fixtures/d04170.txt) | Raspberry Pi 5 Model B Rev 1.0      | [flavioheleno](https://github.com/flavioheleno)
 
 If you have a Raspberry Pi and you don't see its model revision listed here, please consider contributing the contents of your `/proc/cpuinfo`.
 
